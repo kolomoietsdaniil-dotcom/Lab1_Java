@@ -13,8 +13,9 @@ public class Main {
             System.out.print("Choice action: ");
 
             if (!scanner.hasNextInt()) {
-                System.out.println("Input number");
-                scanner.next();
+                System.out.print("Input number! ");
+                System.out.println();
+                scanner.nextInt();
                 continue;
             }
 
@@ -75,7 +76,7 @@ public class Main {
 
     // --- ЗАВДАННЯ 2 ---
     public static void task2(Scanner scanner) {
-        System.out.println("Input size of array (n <= 200");
+        System.out.println("Input size of array (n <= 200)");
         int n = scanner.nextInt();
         while (n <= 0 || n > 200) {
             System.out.println("Input wrong n");
@@ -87,7 +88,7 @@ public class Main {
         double array[] = new double[n];
 
         System.out.println("Input values of array: ");
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             array[i] = scanner.nextDouble();
         }
         System.out.println("Input shift (k)");
@@ -99,19 +100,20 @@ public class Main {
         }
 
         for (int l = 0; l < n; l++) {
-            System.out.print(extra_array[l]);
+            System.out.println(extra_array[l]);
         }
     }
 
     // --- ЗАВДАННЯ 3 ---
     public static void task3(Scanner scanner) {
-        System.out.println("Input size of array (n <= 15");
+        System.out.println("Input size of array (n <= 15)");
         int n = scanner.nextInt();
         while (n <= 0 || n > 15) {
-            System.out.println("Input size of array (n <= 15");
+            System.out.println("Input size of array (n <= 15): ");
             n = scanner.nextInt();
         }
 
+        System.out.println("Input matrix elements:");
         double matrix[][] = new double[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -124,7 +126,6 @@ public class Main {
         }
 
         double max_below = matrix[1][0];
-        System.out.println("Input matrix elements:");
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < i; j++) {
                 if (max_below < matrix[i][j]) {
@@ -136,6 +137,7 @@ public class Main {
 
         double sum = 0;
         int count = 0;
+
 
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
@@ -156,15 +158,14 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.println("Input text: ");
         String text = in.nextLine();
-        String[] words = text.split("[\\s,.:;-?!]+");
-        System.out.println(":");
+        String[] words = text.split("[\\s,.:;-?!«»]+");
+        System.out.println();
         for (int i=0; i<words.length; i++){
             String word = words[i];
             if (!word.isEmpty() && word.length() % 2 == 0) {
                 System.out.print(word + " ");
             }
         }
-        in.close();
+        System.out.println();
     }
-
     }
