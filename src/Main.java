@@ -12,7 +12,7 @@ public class Main {
             System.out.println("0. Exit");
             System.out.print("Choice action: ");
 
-            if (!scanner.hasNextInt()) {
+            if (!scanner.hasNext()) {
                 System.out.print("Input number! ");
                 System.out.println();
                 scanner.nextInt();
