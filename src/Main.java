@@ -5,16 +5,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n================ ГОЛОВНЕ МЕНЮ ================");
-            System.out.println("1. Завдання 1 (Обчислення арифметичного виразу)");
-            System.out.println("2. Завдання 2 (Циклічний зсув масиву вправо)");
-            System.out.println("3. Завдання 3 (Обробка матриці)");
-            System.out.println("4. Завдання 4 (Вилучення слів непарної довжини)");
-            System.out.println("0. Вихід з програми");
-            System.out.print("Оберіть номер завдання: ");
+            System.out.println("Task 1");
+            System.out.println("Task 2 ");
+            System.out.println("Task 3");
+            System.out.println("Task 4");
+            System.out.println("Exit");
+            System.out.print("Choice action: ");
 
             if (!scanner.hasNextInt()) {
-                System.out.println("Будь ласка, введіть число!");
+                System.out.println("Input number");
                 scanner.next();
                 continue;
             }
@@ -35,11 +34,11 @@ public class Main {
                     task4(scanner);
                     break;
                 case 0:
-                    System.out.println("Роботу програми завершено.");
+                    System.out.println("Exiting...");
                     scanner.close();
                     return;
                 default:
-                    System.out.println("Невірний пункт меню! Спробуйте ще раз.");
+                    System.out.println("Wrong choice");
             }
         }
     }
@@ -50,8 +49,8 @@ public class Main {
         double x1 = scanner.nextDouble();
         double y1 = scanner.nextDouble();
 
-        double first_half_double_values = (2 * Math.pow(x1, 2) + x1 * y1) / Math.pow(x1 * y1, 2);
-        double second_half_double_values = (3 * x1 * y1 - Math.pow(y1, 3)) / (Math.pow(x1, 2) + 2 * Math.pow(y1, 2));
+        double first_half_double_values = (2 * Math.pow(x1, 2) + x1 * y1) / (Math.pow(x1 * y1, 2));
+        double second_half_double_values = (3 * x1 * y1 - Math.pow(y1,3)) / (Math.pow(x1, 2) + 2 * Math.pow(y1, 2));
         double result_double_values = first_half_double_values + second_half_double_values;
         System.out.println("Result for double values and double result: " + result_double_values);
 
