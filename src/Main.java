@@ -9,7 +9,7 @@ public class Main {
             System.out.println("Task 2 ");
             System.out.println("Task 3");
             System.out.println("Task 4");
-            System.out.println("Exit");
+            System.out.println("0. Exit");
             System.out.print("Choice action: ");
 
             if (!scanner.hasNextInt()) {
